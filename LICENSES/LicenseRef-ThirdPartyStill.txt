@@ -1,0 +1,11 @@
+Third-party still image
+
+public/img/poc/kiriakou-rogan.jpg is a still from The Joe Rogan Experience
+(October 2025) showing John Kiriakou, an Ivy Cyber advisor. It is shown here,
+as on ivycyber.com, to illustrate his public profile.
+
+Copyright in the broadcast belongs to its owner. This file is not licensed
+under the GNU Affero General Public License or any other license in this
+repository, and no permission to reuse it is granted by its inclusion here.
+Remove or replace it if you redistribute this project and do not have
+permission to use it.

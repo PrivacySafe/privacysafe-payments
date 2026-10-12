@@ -1,0 +1,227 @@
+Secret Agent Club paid access proof of concept
+NOTICE
+
+Copyright (C) 2026 Ivy Cyber LLC
+https://ivycyber.com
+
+Unless a file or component carries a different notice, copyright is held by
+Ivy Cyber LLC.
+
+Software: GNU Affero General Public License version 3 or later (AGPL-3.0-or-later)
+Documentation: GNU Affero General Public License version 3 or later (AGPL-3.0-or-later)
+
+See LICENSE and LICENSES for applicable license terms. Third-party components
+retain their original copyright notices and licenses. REUSE.toml records the
+license of every file that cannot carry its own SPDX header.
+
+Third-party material
+--------------------
+
+Stack Sans Text (public/fonts/StackSansText.woff2)
+  Copyright 2025 The Stack Sans Project Authors
+  https://github.com/DylanYoungKoto/Stack-Sans
+  SIL Open Font License 1.1 (public/fonts/OFL.txt, LICENSES/OFL-1.1.txt)
+
+Phantom, MetaMask, Solflare, Backpack, USDC and Solana marks (public/img/brands/)
+  From @web3icons/core 4.0.58, https://github.com/0xa3k5/web3icons
+  Copyright (c) 2024 0xa3k5
+  MIT License (LICENSES/MIT.txt)
+  The marks themselves remain trademarks of their respective owners.
+
+Contributor Covenant 3.0 (CODE_OF_CONDUCT.md, adapted)
+  Organization for Ethical Source
+  https://www.contributor-covenant.org/version/3/0/code_of_conduct/
+  CC BY-SA 4.0 (LICENSES/CC-BY-SA-4.0.txt)
+
+Material under other licenses
+-----------------------------
+
+Walkthrough music (public/videos/, design/walkthrough-videos/,
+design/source-media/tinyworlds-*.mp3)
+  "Happy Adventure (Loop)" (desktop walkthrough) and "Honey Bear" (device
+  walkthrough) by Tiny Worlds (https://nullrights.com/artist/TinyWorlds),
+  dedicated to the public domain under CC0 1.0 Universal
+  (https://creativecommons.org/publicdomain/zero/1.0/, LICENSES/CC0-1.0.txt).
+  Mixed under the walkthroughs at 65% volume with a fade in and out; the
+  combined walkthrough uses both, one per part.
+
+Photograph of John Kiriakou on The Joe Rogan Experience
+(public/img/poc/kiriakou-rogan.jpg)
+  A still from a third-party broadcast, used as on ivycyber.com. It is not
+  covered by this repository's license; see LICENSES/LicenseRef-ThirdPartyStill.txt.
+
+Portrait of John Kiriakou (public/img/john-kiriakou.webp)
+  Cropped from assets/people/john-kiriakou.png in the PrivacySafe press kit,
+  published by Ivy Cyber LLC under CC BY-SA 4.0. ShareAlike keeps this crop
+  under the same license (LICENSES/CC-BY-SA-4.0.txt).
+
+Sample episode (media/video.webm, media/video.mp4, media/poster.jpg) is an Ivy
+Cyber LLC recording with John Kiriakou, used here as the demo's members-only
+episode.
+
+PrivacySafe artwork, app icons, favicons and logos (public/img/,
+privacysafe_logo.svg) are Ivy Cyber LLC originals under AGPL-3.0-or-later, like
+the rest of this repository.
+PrivacySafe(R) is a registered trademark; see TRADEMARKS.md.
+
+JavaScript shipped to browsers (public/js/)
+-------------------------------------------
+
+The scripts in public/js are built from client/ and lib/ (AGPL-3.0-or-later)
+with the packages below. Per-script licensing for GNU LibreJS is published at
+/weblabels.html. License texts: LICENSES/MIT.txt, LICENSES/Apache-2.0.txt.
+
+@solana-program/compute-budget 0.11.0
+  No copyright notice in the published package
+  Apache-2.0
+  https://github.com/solana-program/compute-budget
+
+@solana-program/token 0.9.0
+  No copyright notice in the published package
+  Apache-2.0
+  https://github.com/solana-program/token
+
+@solana-program/token-2022 0.6.1
+  No copyright notice in the published package
+  Apache-2.0
+  https://github.com/solana-program/token-2022
+
+@solana/accounts 5.5.1
+  Copyright (c) 2023 Solana Labs, Inc
+  MIT
+  https://github.com/anza-xyz/kit
+
+@solana/addresses 5.5.1
+  Copyright (c) 2023 Solana Labs, Inc
+  MIT
+  https://github.com/anza-xyz/kit
+
+@solana/assertions 5.5.1
+  Copyright (c) 2023 Solana Labs, Inc
+  MIT
+  https://github.com/anza-xyz/kit
+
+@solana/codecs-core 5.5.1
+  Copyright (c) 2023 Solana Labs, Inc
+  MIT
+  https://github.com/anza-xyz/kit
+
+@solana/codecs-data-structures 5.5.1
+  Copyright (c) 2023 Solana Labs, Inc
+  MIT
+  https://github.com/anza-xyz/kit
+
+@solana/codecs-numbers 5.5.1
+  Copyright (c) 2023 Solana Labs, Inc
+  MIT
+  https://github.com/anza-xyz/kit
+
+@solana/codecs-strings 5.5.1
+  Copyright (c) 2023 Solana Labs, Inc
+  MIT
+  https://github.com/anza-xyz/kit
+
+@solana/errors 5.5.1
+  Copyright (c) 2023 Solana Labs, Inc
+  MIT
+  https://github.com/anza-xyz/kit
+
+@solana/fast-stable-stringify 5.5.1
+  Copyright (c) 2023 Solana Labs, Inc
+  MIT
+  https://github.com/anza-xyz/kit
+
+@solana/functional 5.5.1
+  Copyright (c) 2023 Solana Labs, Inc
+  MIT
+  https://github.com/anza-xyz/kit
+
+@solana/instructions 5.5.1
+  Copyright (c) 2023 Solana Labs, Inc
+  MIT
+  https://github.com/anza-xyz/kit
+
+@solana/options 5.5.1
+  Copyright (c) 2023 Solana Labs, Inc
+  MIT
+  https://github.com/anza-xyz/kit
+
+@solana/rpc 5.5.1
+  Copyright (c) 2023 Solana Labs, Inc
+  MIT
+  https://github.com/anza-xyz/kit
+
+@solana/rpc-api 5.5.1
+  Copyright (c) 2023 Solana Labs, Inc
+  MIT
+  https://github.com/anza-xyz/kit
+
+@solana/rpc-spec 5.5.1
+  Copyright (c) 2023 Solana Labs, Inc
+  MIT
+  https://github.com/anza-xyz/kit
+
+@solana/rpc-spec-types 5.5.1
+  Copyright (c) 2023 Solana Labs, Inc
+  MIT
+  https://github.com/anza-xyz/kit
+
+@solana/rpc-transformers 5.5.1
+  Copyright (c) 2023 Solana Labs, Inc
+  MIT
+  https://github.com/anza-xyz/kit
+
+@solana/rpc-transport-http 5.5.1
+  Copyright (c) 2023 Solana Labs, Inc
+  MIT
+  https://github.com/anza-xyz/kit
+
+@solana/rpc-types 5.5.1
+  Copyright (c) 2023 Solana Labs, Inc
+  MIT
+  https://github.com/anza-xyz/kit
+
+@solana/signers 5.5.1
+  Copyright (c) 2018 Solana Labs, Inc
+  MIT
+  https://github.com/anza-xyz/kit
+
+@solana/transaction-messages 5.5.1
+  Copyright (c) 2023 Solana Labs, Inc
+  MIT
+  https://github.com/anza-xyz/kit
+
+@solana/transactions 5.5.1
+  Copyright (c) 2023 Solana Labs, Inc
+  MIT
+  https://github.com/anza-xyz/kit
+
+@wallet-standard/app 1.1.0
+  No copyright notice in the published package; author: Solana Maintainers <maintainers@solana.foundation>
+  Apache-2.0
+  https://github.com/wallet-standard/wallet-standard
+
+@x402/core 2.26.0
+  No copyright notice in the published package; author: x402 Foundation
+  Apache-2.0
+  https://github.com/x402-foundation/x402
+
+@x402/svm 2.26.0
+  No copyright notice in the published package; author: x402 Foundation
+  Apache-2.0
+  https://github.com/x402-foundation/x402
+
+dijkstrajs 1.0.3
+  Copyright (C) 2008 Wyatt Baldwin <self@wyattbaldwin.com> All rights reserved
+  MIT
+  git://github.com/tcort/dijkstrajs
+
+qrcode 1.5.4
+  Copyright (c) 2012 Ryan Day
+  MIT
+  git://github.com/soldair/node-qrcode
+
+zod 3.25.76
+  Copyright (c) 2025 Colin McDonnell
+  MIT
+  https://github.com/colinhacks/zod
