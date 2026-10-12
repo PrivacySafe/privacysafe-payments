@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<!--
+SPDX-FileCopyrightText: 2026 Ivy Cyber LLC
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<meta content="dark" name="color-scheme"/>
+<meta content="#0E0D0C" name="theme-color"/>
+
+<!--
+  Content Security Policy. Nothing on this site is inline: no style attributes,
+  no inline scripts, no event handler attributes. Images may also be data: URIs (QR codes, wallet
+  icons supplied by the wallet). The only external origin is
+  privacysafe.click, which serves the metrics script and receives its events.
+
+  frame-ancestors, report-to and sandbox are ignored in a meta tag. Send those
+  as real response headers; the header set is in README.md.
+-->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://privacysafe.click; connect-src 'self' https://privacysafe.click; img-src 'self' data:; media-src 'self'; style-src 'self'; font-src 'self'; base-uri 'none'; object-src 'none'; frame-src 'none'; form-action 'none'; upgrade-insecure-requests"/>
+<meta content="no-referrer" name="referrer"/>
+<meta content="noindex, follow" name="robots"/>
+<meta content="yes" name="mobile-web-app-capable"/>
+<title>Secret Agent Club | PrivacySafe Community Payments</title>
+<meta content="Try the live proof of concept: join John Kiriakou's Secret Agent Club with Solana Pay or x402, in USDC or AUDD, and unlock the members-only episode." name="description"/>
+<link href="https://payments.privacysafe.app/app/" rel="canonical"/>
+<meta content="Ivy Cyber LLC" name="author"/>
+<meta content="PrivacySafe Community Payments" property="og:site_name"/>
+<meta content="website" property="og:type"/>
+<meta content="Secret Agent Club: try PrivacySafe Community Payments" property="og:title"/>
+<meta content="Join John Kiriakou's Secret Agent Club with Solana Pay or x402, in USDC or AUDD, and unlock the members-only episode." property="og:description"/>
+<meta content="https://payments.privacysafe.app/app/" property="og:url"/>
+<meta content="https://payments.privacysafe.app/img/social-preview.jpg" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@GetPrivacySafe" name="twitter:site"/>
+<meta content="https://payments.privacysafe.app/img/social-preview.jpg" name="twitter:image"/>
+<link href="/llms.txt" rel="alternate" title="Plain-text site summary for language models" type="text/markdown"/>
+<!-- PrivacySafe.click Metrics -->
+<script defer data-domain="payments.privacysafe.app" src="https://privacysafe.click/js/script.js"></script>
+
+<link href="/manifest.webmanifest" rel="manifest"/>
+<link href="/img/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<link href="/img/favicon-192.png" rel="icon" sizes="192x192" type="image/png"/>
+<link href="/img/apple-touch-icon.png" rel="apple-touch-icon" sizes="192x192"/>
+<link as="font" crossorigin="" href="/fonts/StackSansText.woff2" rel="preload" type="font/woff2"/>
+<link href="/css/app.css" rel="stylesheet"/>
+<link href="/weblabels.html" rel="jslicense"/>
+<script src="/js/app.js" type="module"></script>
+</head>
+<body>
+<div class="device" id="device">
+<main class="app" data-screen="splash" id="app">
+
+<!-- Splash -->
+<div aria-hidden="true" class="splash" id="splash">
+<p class="brand brand-xl"><img alt="" class="brand-logo" height="27" src="/img/privacysafe-logo.svg" width="240"/><span class="brand-sub">Communities</span></p>
+</div>
+
+<!-- Sign in -->
+<section aria-labelledby="signin-title" class="screen screen-signin" hidden="" id="screen-signin">
+<div class="signin-top">
+<p class="brand brand-lg"><img alt="PrivacySafe" class="brand-logo" height="23" src="/img/privacysafe-logo.svg" width="200"/><span class="brand-sub">Communities</span></p>
+<h1 class="signin-title" id="signin-title" tabindex="-1">Welcome to the Secret Agent Club</h1>
+<p class="signin-text">Use your PrivacySafe address. Decentralized payments for your sovereign identity.</p>
+</div>
+<div class="signin-form">
+<label class="field-label" for="identity">PrivacySafe address</label>
+<input aria-describedby="signin-status" autocapitalize="none" autocomplete="username" class="field" enterkeyhint="go" id="identity" inputmode="email" placeholder="you@privacysafe.me" spellcheck="false" type="text"/>
+<p class="status" id="signin-status" role="status"></p>
+</div>
+<div class="bottom-cta">
+<button class="btn btn-primary btn-block" id="signin-go" type="button">Continue</button>
+</div>
+</section>
+
+<!-- Club -->
+<section aria-labelledby="club-title" class="screen screen-club" hidden="" id="screen-club">
+<header class="topbar topbar-over">
+<p class="brand"><img alt="PrivacySafe" class="brand-logo" height="18" src="/img/privacysafe-logo.svg" width="159"/><span class="brand-sub">Communities</span></p>
+<button aria-label="How payments work" class="icon-btn" id="about-open" type="button"><svg aria-hidden="true" focusable="false" height="22" viewBox="0 0 24 24" width="22"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 11v5.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"/><circle cx="12" cy="7.6" r="1.2" fill="currentColor"/></svg></button>
+<button class="avatar-btn" id="me-btn" type="button"><span aria-hidden="true" class="avatar-initials" id="me-initials">?</span><span class="visually-hidden" id="me-label">Account</span></button>
+</header>
+
+<div aria-label="Club details" class="scroll" id="club-scroll" role="region" tabindex="0">
+<div class="hero" id="hero">
+<div class="hero-art" id="hero-art">
+<svg aria-hidden="true" class="hero-lock" focusable="false" height="44" viewBox="0 0 24 24" width="44"><path d="M7 10.5V8a5 5 0 0 1 10 0v2.5M6.2 10.5h11.6c.66 0 1.2.54 1.2 1.2v7.6c0 .66-.54 1.2-1.2 1.2H6.2c-.66 0-1.2-.54-1.2-1.2v-7.6c0-.66.54-1.2 1.2-1.2ZM12 14.2v2.6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/></svg>
+<p class="hero-lock-text">Members only</p>
+</div>
+<div class="hero-player" hidden="" id="hero-player">
+<video controls="" id="player" playsinline="" preload="metadata"></video>
+</div>
+</div>
+
+<div class="sheetlike">
+<div class="club-head">
+<img alt="" class="host-photo" height="56" src="/img/john-kiriakou.webp" width="56"/>
+<div class="club-head-text">
+<h1 class="club-title" id="club-title" tabindex="-1">Secret Agent Club</h1>
+<p class="club-host">John Kiriakou · <span>3,410 members</span></p>
+</div>
+</div>
+<div class="pills">
+<span class="pill pill-green">Private secure zone</span>
+<span class="pill">No custody</span>
+<span class="pill">Solana</span>
+</div>
+
+<div class="member-banner" hidden="" id="member-banner" tabindex="-1">
+<svg aria-hidden="true" focusable="false" height="22" viewBox="0 0 24 24" width="22"><path d="M5 12.5l4.2 4.2L19 7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"/></svg>
+<div><p class="member-title">You&rsquo;re a member</p><p class="member-text" id="member-text">Welcome to the club. Here&rsquo;s the episode members hear before anyone else.</p></div>
+</div>
+
+<div class="share-grid" hidden="" id="share-grid">
+<button class="tile" id="share-chat" type="button"><img alt="" height="44" src="/img/app-chat.svg" width="44"/><span class="tile-text"><strong>Share in PrivacySafe Chat</strong><small>Send it to a contact or group</small></span><svg aria-hidden="true" class="tile-chev" focusable="false" height="20" viewBox="0 0 24 24" width="20"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg></button>
+<button class="tile" id="save-storage" type="button"><img alt="" height="44" src="/img/app-storage.svg" width="44"/><span class="tile-text"><strong>Save to PrivacySafe Storage</strong><small>Keep a copy in your secure zone</small></span><svg aria-hidden="true" class="tile-chev" focusable="false" height="20" viewBox="0 0 24 24" width="20"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg></button>
+</div>
+
+<p class="club-about">John&rsquo;s private club for unaired episodes, case files, and live Q&amp;A. Pay once from any Solana wallet and the members episode plays here.</p>
+
+<h2 class="section-title">Members get</h2>
+<ul class="perks">
+<li><span aria-hidden="true" class="perk-icon"><svg focusable="false" height="20" viewBox="0 0 24 24" width="20"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span><span><strong>Early episodes</strong><small>Hear them before anyone else</small></span></li>
+<li><span aria-hidden="true" class="perk-icon"><svg focusable="false" height="20" viewBox="0 0 24 24" width="20"><path d="M4 6.5A1.5 1.5 0 0 1 5.5 5h4l2 2h7A1.5 1.5 0 0 1 20 8.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 17.5z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"/></svg></span><span><strong>Case files</strong><small>Shared in the club&rsquo;s secure zone</small></span></li>
+<li><span aria-hidden="true" class="perk-icon"><svg focusable="false" height="20" viewBox="0 0 24 24" width="20"><path d="M12 15a3 3 0 0 0 3-3V7a3 3 0 0 0-6 0v5a3 3 0 0 0 3 3zm6-3a6 6 0 0 1-12 0M12 18v3" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"/></svg></span><span><strong>Live Q&amp;A</strong><small>Ask John directly</small></span></li>
+</ul>
+
+<div class="resume" hidden="" id="resume">
+<p class="resume-text" id="resume-text">A payment is waiting to be matched.</p>
+<button class="btn btn-ghost btn-small" id="resume-btn" type="button">Resume</button>
+</div>
+
+<p class="access" hidden="" id="access"></p>
+</div>
+</div>
+
+<div class="bottom-cta" id="club-cta">
+<button class="btn btn-primary btn-block" id="join" type="button"><span>Join for</span> <span class="cta-price" id="cta-price">1.00 USDC</span></button>
+</div>
+</section>
+
+</main>
+</div>
+
+<!-- Checkout sheet -->
+<dialog aria-labelledby="pay-title" class="sheet" id="pay">
+<div aria-hidden="true" class="grip"></div>
+<div class="pay-step" id="pay-choose">
+<h2 class="sheet-title" id="pay-title" tabindex="-1">Join Secret Agent Club</h2>
+<p class="sheet-sub">One-time join fee, paid straight to John.</p>
+<fieldset class="segmented" id="token-picker">
+<legend class="visually-hidden">Pay in</legend>
+<div class="segmented-track" id="token-options"></div>
+</fieldset>
+<div class="summary">
+<div class="summary-row"><span>Amount</span><strong id="sum-amount">1.00 USDC</strong></div>
+<div class="summary-row"><span>From</span><strong id="sum-from"></strong></div>
+<div class="summary-row"><span>To</span><strong class="sum-to"><img alt="" height="20" src="/img/john-kiriakou.webp" width="20"/>johnkiriakou@privacysafe.me</strong></div>
+<div class="summary-row"><span>Network</span><strong id="sum-net">Solana</strong></div>
+</div>
+<div class="stack">
+<a class="btn btn-primary btn-block" id="co-open" rel="noreferrer noopener">Open wallet app</a>
+<div class="stack" hidden="" id="co-x402"></div>
+<button aria-controls="qr" aria-expanded="false" class="btn btn-text" id="qr-toggle" type="button">Pay from another device</button>
+</div>
+<div class="qr" hidden="" id="qr"><div class="qr-code" id="co-qr"></div><p class="fine">Scan with any Solana wallet.</p></div>
+<p class="fine center" id="rails-note">Solana Pay · no custody</p>
+</div>
+
+<div class="pay-step" hidden="" id="pay-wait">
+<div aria-hidden="true" class="ring" id="ring"><svg focusable="false" height="96" viewBox="0 0 96 96" width="96"><circle cx="48" cy="48" fill="none" r="42" stroke="rgba(255,255,255,.12)" stroke-width="6"/><circle class="ring-arc" cx="48" cy="48" fill="none" r="42" stroke="currentColor" stroke-dasharray="70 300" stroke-linecap="round" stroke-width="6"/><path class="ring-check" d="M32 49l11 11 21-23" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/></svg></div>
+<h2 class="sheet-title center" id="wait-title" tabindex="-1">Waiting for payment</h2>
+<p class="status center" id="pay-status" role="status">Approve the payment in your wallet, then come back here.</p>
+<ol class="steps" id="steps">
+<li data-step="sent">Approve in your wallet</li>
+<li data-step="final">Finalize on Solana</li>
+<li data-step="open">Episode unlocked</li>
+</ol>
+<div class="stack">
+<a class="btn btn-ghost btn-block" id="wait-open" rel="noreferrer noopener">Open wallet app again</a>
+<button class="btn btn-text" id="wait-close" type="button">Close</button>
+</div>
+</div>
+</dialog>
+
+<!-- Wallet chooser -->
+<dialog aria-labelledby="wallet-title" class="sheet" id="wallet-sheet">
+<div aria-hidden="true" class="grip"></div>
+<h2 class="sheet-title" id="wallet-title" tabindex="-1">Choose a wallet</h2>
+<p class="sheet-sub">Pay in the app with a wallet on this device.</p>
+<ul class="wallet-list" id="wallet-list"></ul>
+<div class="stack">
+<button class="btn btn-text" id="wallet-close" type="button">Close</button>
+</div>
+</dialog>
+
+<!-- Share and save sheet -->
+<dialog aria-labelledby="link-title" class="sheet" id="link-sheet">
+<div aria-hidden="true" class="grip"></div>
+<img alt="" class="sheet-icon" height="52" id="link-icon" src="/img/app-chat.svg" width="52"/>
+<h2 class="sheet-title" id="link-title">Share in PrivacySafe Chat</h2>
+<p class="sheet-sub" id="link-text"></p>
+<p class="fine-label">Link</p>
+<p class="url" id="link-url"></p>
+<div class="stack">
+<a class="btn btn-primary btn-block" id="link-open">Open in PrivacySafe</a>
+<button class="btn btn-ghost btn-block" id="link-copy" type="button">Copy link</button>
+<button class="btn btn-text" id="link-close" type="button">Close</button>
+</div>
+</dialog>
+
+<!-- Account sheet -->
+<dialog aria-labelledby="me-title" class="sheet" id="me-sheet">
+<div aria-hidden="true" class="grip"></div>
+<h2 class="sheet-title" id="me-title">Your PrivacySafe address</h2>
+<p class="url" id="me-address"></p>
+<div class="stack">
+<button class="btn btn-ghost btn-block" id="me-change" type="button">Use a different address</button>
+<button class="btn btn-text" id="me-close" type="button">Close</button>
+</div>
+</dialog>
+
+<!-- About sheet -->
+<dialog aria-labelledby="about-title" class="sheet" id="about">
+<div aria-hidden="true" class="grip"></div>
+<h2 class="sheet-title" id="about-title">How payments work</h2>
+<p class="sheet-sub">You pay John directly from your own wallet. Access unlocks only after the payment is final on Solana.</p>
+<ul class="about-list">
+<li><strong>Solana Pay:</strong> pay from any Solana wallet by link or QR code. Your payment carries a reference only you can produce.</li>
+<li><strong>x402:</strong> pay inside the app with the wallet on this device. The network fee is covered, so no SOL is needed.</li>
+<li><strong>USDC or AUDD:</strong> paid straight to John. No friction, no custody.</li>
+</ul>
+<div class="stack">
+<a class="btn btn-ghost btn-block" href="/source">Source code</a>
+<button class="btn btn-text" id="about-close" type="button">Close</button>
+</div>
+<p class="fine center">&copy; 2026 Ivy Cyber LLC. Free software, GNU AGPL v3 or later. PrivacySafe&reg; and 3NWeb&reg; are registered trademarks.</p>
+</dialog>
+
+<div aria-live="polite" class="toast" id="toast" role="status"></div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+# PrivacySafe Community Payments
+
+> A live proof of concept: pay via the app or AI agents, using Solana and x402, in USDC or AUDD, and unlock a private community. Payments go directly to the creator's wallet; PrivacySafe never takes custody. It extends PrivacySafe, end-to-end encrypted apps that already ship.
+
+Published by Ivy Cyber LLC (support@ivycyber.com). Free software, GNU AGPL version 3 or later. Canonical site: https://payments.privacysafe.app (payment.privacysafe.app serves the same site). Attribute to "PrivacySafe Community Payments (Ivy Cyber LLC)".
+
+## What it does
+
+- A creator charges for access to a private community. The example is John Kiriakou's Secret Agent Club: a members-only podcast episode, case files and live Q&A, for 1.00 USDC or 1.40 AUDD.
+- **Solana Pay:** pay from any Solana wallet, by link on the phone or by QR code from another device. Each payment carries a reference only the paying member can produce.
+- **x402:** HTTP-native payments inside the app, usable by people and by AI agents. The network fee is covered, so no SOL is needed. In the app, the wallet button shows which wallets are detected on the device (for example "Pay with Phantom (detected)").
+- **Verification:** the server unlocks access only after the payment is final on Solana.
+- **Identity:** members sign in with a PrivacySafe address (for example name@privacysafe.me). No phone number.
+- **After joining:** the members-only episode plays, and members can share it in PrivacySafe Chat or save it to PrivacySafe Storage.
+
+## Status
+
+Proof of concept. Payments are real Solana transactions, kept small. Sharing to PrivacySafe Chat and Storage hands off to the PrivacySafe app, which is adding support for it. The member count shown in the club is illustrative.
+
+## Links
+
+- [Front page](https://payments.privacysafe.app/): overview, walkthrough videos, deck, flyer and team
+- [Try the app](https://payments.privacysafe.app/app/): the Secret Agent Club, live
+- [Android demo, "PSF Payments: Crypto"](https://psafe.ly/payapk)
+- [Desktop walkthrough video (MP4)](https://payments.privacysafe.app/videos/secret-agent-club-desktop-walkthrough.mp4)
+- [Phone walkthrough video (MP4)](https://payments.privacysafe.app/videos/secret-agent-club-device-walkthrough.mp4)
+- [Promotional flyer (PDF)](https://payments.privacysafe.app/downloads/PrivacySafe-Community-Payments.pdf)
+- [Pitch deck](https://psafe.ly/deck)
+- [Source code](https://github.com/PrivacySafe/privacysafe-payments)
+- [JavaScript licenses (LibreJS)](https://payments.privacysafe.app/weblabels.html)
+
+## PrivacySafe
+
+PrivacySafe is a suite of free software apps for private communication and storage: end-to-end encrypted chat, peer-to-peer voice and video calls, private contacts, encrypted storage and a vault for credentials. Shipping in the Solana dApp Store and Google Play, and for Android, Windows, macOS and GNU/Linux. Built on the 3NWeb protocols, documented at IEEE SA Open.
+
+- [PrivacySafe](https://privacysafe.app)
+- [3NWeb at IEEE SA Open](https://opensource.ieee.org/3nweb)
+
+## Who is behind it
+
+- **Ivy Cyber LLC** publishes this project and offers PrivacySafe products and services: https://ivycyber.com
+- **PrivacySafe Foundation, Inc.**, a 501(c)(3) nonprofit public charity, supports upstream development: https://privacysafe.foundation
+- **Team:** Sean O'Brien (Founder & CEO), Sheree Ip (Director of Strategy & Innovation), John Kiriakou (Security Advisor). Engineering is led by Mikalai Birukou, Director of Technology.
+- Built for the Colosseum Hackathon, led by Sheree Ip from Superteam Australia.
+
+## Optional
+
+- [Privacy policy](https://ivycyber.com/privacy)
+- [Terms](https://ivycyber.com/terms)
+- [Security and bug bounty](https://ivycyber.com/security-policy/)
+- Social: [Mastodon](https://privacysafe.social/@privacysafe), [X](https://x.com/GetPrivacySafe), [LinkedIn](https://www.linkedin.com/company/privacysafe-app), [Bluesky](https://bsky.app/profile/privacysafe.social), [YouTube](https://www.youtube.com/@privacysafe)

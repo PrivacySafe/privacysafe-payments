@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+SPDX-FileCopyrightText: 2026 Ivy Cyber LLC
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://payments.privacysafe.app/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <image:image><image:loc>https://payments.privacysafe.app/img/social-preview.jpg</image:loc></image:image>
+    <video:video>
+      <video:thumbnail_loc>https://payments.privacysafe.app/img/poc/poster-desktop.webp</video:thumbnail_loc>
+      <video:title>Secret Agent Club: PrivacySafe Community Payments walkthrough (desktop)</video:title>
+      <video:description>A listener joins John Kiriakou's Secret Agent Club with Solana Pay in USDC, shares the episode in PrivacySafe Chat, then a second listener pays in AUDD via x402.</video:description>
+      <video:content_loc>https://payments.privacysafe.app/videos/secret-agent-club-desktop-walkthrough.mp4</video:content_loc>
+      <video:duration>71</video:duration>
+      <video:publication_date>2026-10-11</video:publication_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://payments.privacysafe.app/img/poc/poster-device.webp</video:thumbnail_loc>
+      <video:title>Secret Agent Club: PrivacySafe Community Payments walkthrough (phone)</video:title>
+      <video:description>The same walkthrough on a phone: Solana Pay in USDC, then x402 in AUDD with a detected Phantom wallet.</video:description>
+      <video:content_loc>https://payments.privacysafe.app/videos/secret-agent-club-device-walkthrough.mp4</video:content_loc>
+      <video:duration>68</video:duration>
+      <video:publication_date>2026-10-11</video:publication_date>
+    </video:video>
+  </url>
+</urlset>

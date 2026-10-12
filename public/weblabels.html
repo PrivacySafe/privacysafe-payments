@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--
+SPDX-FileCopyrightText: 2026 Ivy Cyber LLC
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="dark" name="color-scheme"/>
+
+<!--
+  Content Security Policy. Nothing on this site is inline: no style attributes,
+  no inline scripts, no event handler attributes. The only external origin is
+  privacysafe.click, which serves the metrics script and receives its events.
+
+  frame-ancestors, report-to and sandbox are ignored in a meta tag. Send those
+  as real response headers; the header set is in README.md.
+-->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://privacysafe.click; connect-src 'self' https://privacysafe.click; img-src 'self' data:; media-src 'self'; style-src 'self'; font-src 'self'; base-uri 'none'; object-src 'none'; frame-src 'none'; form-action 'none'; upgrade-insecure-requests"/>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<title>JavaScript license information | PrivacySafe</title>
+
+<!-- PrivacySafe.click Metrics -->
+<script defer data-domain="payments.privacysafe.app" src="https://privacysafe.click/js/script.js"></script>
+
+<link href="/css/app.css" rel="stylesheet"/>
+</head>
+<body>
+<main class="doc" id="top">
+<h1>JavaScript license information</h1>
+<p>Every script this page runs, its licenses, and where to get the source. Third-party license texts: <a href="/js/THIRD-PARTY-LICENSES.txt">THIRD-PARTY-LICENSES.txt</a>. Full notices are in the <a href="/source">source repository</a>'s <code>NOTICE</code> file.</p>
+<div aria-label="Scripts and licenses" class="table-scroll" role="region" tabindex="0">
+<table id="jslicense-labels1">
+<thead><tr><th scope="col">Script</th><th scope="col">Licenses</th><th scope="col">Source</th></tr></thead>
+<tbody>
+<tr>
+<td><a href="/js/app.js">app.js</a></td>
+<td><a href="https://www.gnu.org/licenses/agpl-3.0.html">GNU-AGPL-3.0-or-later</a><br/><a href="http://www.jclark.com/xml/copying.txt">Expat</a><br/><a href="http://www.apache.org/licenses/LICENSE-2.0">Apache-2.0</a></td>
+<td><a href="/source">Source</a></td>
+</tr>
+<tr>
+<td><a href="/js/chunks/x402-pay-XD2Z3XLC.js">x402-pay-XD2Z3XLC.js</a></td>
+<td><a href="https://www.gnu.org/licenses/agpl-3.0.html">GNU-AGPL-3.0-or-later</a><br/><a href="http://www.jclark.com/xml/copying.txt">Expat</a><br/><a href="http://www.apache.org/licenses/LICENSE-2.0">Apache-2.0</a></td>
+<td><a href="/source">Source</a></td>
+</tr>
+<tr>
+<td><a href="/js/chunks/chunk-LOKUJV26.js">chunk-LOKUJV26.js</a></td>
+<td><a href="https://www.gnu.org/licenses/agpl-3.0.html">GNU-AGPL-3.0-or-later</a></td>
+<td><a href="/source">Source</a></td>
+</tr>
+<tr>
+<td><a href="/js/lightbox.js">lightbox.js</a></td>
+<td><a href="https://www.gnu.org/licenses/agpl-3.0.html">GNU-AGPL-3.0-or-later</a></td>
+<td><a href="/source">Source</a></td>
+</tr>
+<tr>
+<td><a href="/js/page.js">page.js</a></td>
+<td><a href="https://www.gnu.org/licenses/agpl-3.0.html">GNU-AGPL-3.0-or-later</a></td>
+<td><a href="/source">Source</a></td>
+</tr>
+<tr>
+<td><a href="https://privacysafe.click/js/script.js">script.js</a></td>
+<td><a href="http://www.jclark.com/xml/copying.txt">Expat</a></td>
+<td><a href="https://github.com/plausible/analytics/tree/master/tracker">Source</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><a href="/">Back to the Secret Agent Club</a></p>
+</main>
+</body>
+</html>
