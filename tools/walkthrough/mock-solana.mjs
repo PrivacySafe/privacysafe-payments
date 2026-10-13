@@ -48,7 +48,7 @@ async function fac(url, j) {
   if (url.endsWith("/verify")) return ok ? { isValid: true, payer } : { isValid: false, invalidReason: "invalid", payer };
   if (!ok) return { success: false, errorReason: "invalid", transaction: "", network: r.network };
   const s = sig(); const at = keys.indexOf(dest);
-  txs.set(s, { finalized: false, tx: { slot: 2000 + n, transaction: { message: { accountKeys: keys.map((k) => ({ pubkey: k })) } }, meta: { err: null, preTokenBalances: [{ accountIndex: at, mint: r.asset, uiTokenAmount: { amount: "0" } }], postTokenBalances: [{ accountIndex: at, mint: r.asset, uiTokenAmount: { amount: r.amount } }] } } });
+  txs.set(s, { finalized: false, tx: { slot: 2000 + n, blockTime: Math.floor(Date.now() / 1000), transaction: { message: { accountKeys: keys.map((k) => ({ pubkey: k })) } }, meta: { err: null, preTokenBalances: [{ accountIndex: at, mint: r.asset, uiTokenAmount: { amount: "0" } }], postTokenBalances: [{ accountIndex: at, mint: r.asset, uiTokenAmount: { amount: r.amount } }] } } });
   setTimeout(() => { txs.get(s).finalized = true; }, Number(process.env.MOCK_FINALIZE_MS || 3000));
   return { success: true, transaction: s, network: r.network, payer };
 }

@@ -14,7 +14,7 @@
     "start": "node --env-file-if-exists=.env server.js",
     "dev": "npm run build && npm start",
     "check-address": "node scripts/check-address.js",
-    "test": "node tests/reference.mjs && tools/walkthrough/serve-demo.sh bash -c 'node tests/abuse.mjs && node tests/front.mjs && node tests/header.mjs && node tests/csp.mjs && node tests/a11y.mjs && node tests/flows.mjs 390 844 device && node tests/flows.mjs 390 844 device-x402 x402 && node tests/flows.mjs 1920 1080 desktop'",
+    "test": "node tests/reference.mjs && node tests/paid-access.mjs && tools/walkthrough/serve-demo.sh bash -c 'node tests/abuse.mjs && node tests/front.mjs && node tests/header.mjs && node tests/csp.mjs && node tests/a11y.mjs && node tests/flows.mjs 390 844 device && node tests/flows.mjs 390 844 device-x402 x402 && node tests/flows.mjs 1920 1080 desktop'",
     "videos": "tools/walkthrough/make-videos.sh"
   },
   "dependencies": {
